@@ -10,10 +10,11 @@ ENV N8N_BASIC_AUTH_USER=kshalom419
 ENV N8N_BASIC_AUTH_PASSWORD=Ymgxripper171031
 RUN mkdir -p /home/node/.n8nAdd commentMore actions
 
-VOLUME /home/node/.n8n
+# Optional: Permissions fix (see warning)
+ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
 
-EXPOSE 5678
+# Ensure the settings directory exists
+RUN mkdir -p /home/node/.n8n
 
+# ✅ Tell Docker what to run when container starts
 CMD ["n8n"]
-# Optional: Set timezone
-ENV TZ=Asia/Kolkata
