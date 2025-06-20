@@ -7,7 +7,7 @@ ENV N8N_PROTOCOL=http
 ENV GENERIC_TIMEZONE=Asia/Kolkata
 
 # 🔗 Your actual Render URL:
-ENV WEBHOOK_URL=https://<your-project-name>.railway.app/
+ENV WEBHOOK_URL=https://n8n-server-ph1v.railway.app/
 
 # ———— Basic Auth (optional) ————
 ENV N8N_BASIC_AUTH_ACTIVE=true
